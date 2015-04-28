@@ -13,6 +13,7 @@
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/gulid.css">
   <!-- endbuild -->
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="bower_components/modernizr/modernizr.js"></script>
@@ -25,66 +26,81 @@
   <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
+<h1 class="blind">우분투두</h1>
 <!--[if lt IE 10]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
 <![endif]-->
 <header>
-<div class="logo">
-  <!--<img src=""/>-->
-</div>
-<nav><a href="">home</a> <a href="/guild">guild</a></nav>
-<div class="left_section">
-  <div class="search_wrapper">
-    <form method="post" action="">
-      <input class="search_input" value="Search guilds" type="text">
-      <input class="search_submit" type="submit" value="">
-    </form>
+  <div class="logo">
+    <!--<img src=""/>-->
   </div>
-  <div class="addBtn_and_profile_container">
-    <ul class="btn_wrapper">
-      <li class="todo_add_btn">
-        <div id="add_wrap" style="display:none;">
-          <div class="modal_effect_shadow"></div>
-          <div class="modal_effect"></div>
-          <form class="add_todo">
-            <!-- 파티 설정	-->
-            <div class="select_party">
-              <label id="selected_party_name">개인</label>
-              <select id="select_party_list" onchange="showSelectedParty()">
-                <option>개인</option>
-                <option>네트워크</option>
-                <option>자구알</option>
-              </select>
-            </div>
 
-            <!-- 날짜선택 -->
-            <input id="datepicker" class="calendario calendar_box hasDatepicker" name="date" value="만기기한이 없습니다.">
 
-            <!-- 일정 이름 -->
-            <input type="text" name="title" class="input_todoName" placeholder="일정 이름" autocomplete="off" alt="일정 이름"
-                   required="">
+  <nav>
+    <h1 class="blind"> 페이지 메뉴 </h1>
 
-            <!-- 상세 내용 -->
+    <h2 class="blind">홈</h2>
+    <a href="">home</a>
+
+    <h2 class="blind">길드</h2>
+    <a href="/guild">guild</a>
+  </nav>
+
+  <section class="left_section">
+    <h1 class="blind">검색창,Todo추가,내정보</h1>
+
+    <div class="search_wrapper">
+      <h2 class="blind">검색창</h2>
+
+      <form method="post" action="">
+        <input class="search_input" value="Search guilds" type="text">
+        <input class="search_submit" type="submit" value="">
+      </form>
+    </div>
+    <div class="addBtn_and_profile_container">
+      <h2 class="blind">투두 추가</h2>
+      <ul class="btn_wrapper">
+        <li class="todo_add_btn">
+          <div id="add_wrap" style="display:none;">
+            <div class="modal_effect_shadow"></div>
+            <div class="modal_effect"></div>
+            <form class="add_todo">
+              <!-- 파티 설정	-->
+              <div class="select_party">
+                <label id="selected_party_name">개인</label>
+                <select id="select_party_list" onchange="showSelectedParty()">
+                  <option>개인</option>
+                  <option>네트워크</option>
+                  <option>자구알</option>
+                </select>
+              </div>
+
+              <!-- 날짜선택 -->
+              <input id="datepicker" class="calendario calendar_box hasDatepicker" name="date" value="만기기한이 없습니다.">
+
+              <!-- 일정 이름 -->
+              <input type="text" name="title" class="input_todoName" placeholder="일정 이름" autocomplete="off" alt="일정 이름"
+                     required="">
+
+              <!-- 상세 내용 -->
             <textarea name="contents" class="input_todoComment" cols="50" rows="5"
                       placeholder="상세내용을 입력해주세요."></textarea>
 
-            <!-- 버튼 -->
-            <div class="todo_modal_btn">
-              <!-- <input type = "reset" value = "reset"/> -->
-              <input type="submit" value="submit" class="submit_btn">
-              <input type="button" value="cancel" class="cancel_btn">
-            </div>
-          </form>
-        </div>
-      </li>
-      <li class="profile"></li>
-    </ul>
-  </div>
-</div>
-
-
-<script type="text/javascript" src="/scripts/add_todo_modal/todo_modal.js"></script>
+              <!-- 버튼 -->
+              <div class="todo_modal_btn">
+                <!-- <input type = "reset" value = "reset"/> -->
+                <input type="submit" value="submit" class="submit_btn">
+                <input type="button" value="cancel" class="cancel_btn">
+              </div>
+            </form>
+          </div>
+        </li>
+        <li class="profile"></li>
+      </ul>
+    </div>
+  </section>
+  <script type="text/javascript" src="/scripts/add_todo_modal/todo_modal.js"></script>
 </header>
 
 
@@ -105,43 +121,81 @@
   </div>
 </div>
 
-<div id="container" class="ns_personal">
-  <aside>
-    <div class="party_pavicon">휴</div>
-    <div class="party_pavicon">휴</div>
-
-  </aside>
-  <main>
-    <section>
-      <div class="category">
-        <h1 class="name">Past</h1>
-        <span class="date">~ 2015.04.06</span>
+<section id="container" class="ns_personal">
+  <h1 class="blind">내가 속한 길드들</h1>
+  <header class="ui-header dark">
+    <div class="ui-header-coverphoto">
+      <div style="-webkit-transform: translate3d(0px, 0px, 0px); background-image: url(https://s.yimg.com/pw/images/coverphoto10_h.jpg.v3);"></div>
+    </div>
+    <div class="ui-header-content" >
+      <div class="ui-header-avatar">
+        <a data-track="headerBuddyIconClick" href="/photos/103971606@N08/" data-rapid_p="35">
+          <div class="avatar person large"
+               style="background-image: url(//c4.staticflickr.com/4/3715/buddyicons/103971606@N08_r.jpg?1391599212#103971606@N08);">
+          </div>
+        </a>
       </div>
-      <ul class="past">
-        <li class="todo"><span class="tid">1</span>
-
-          <div class="party_pavicon">p</div>
-          <h2>asd</h2>
-
-          <p>1일 지남</p><a class="complete_btn"></a></li>
-      </ul>
-    </section>
-    <section>
-      <div class="category">
-        <h1 class="name">Today</h1>
-        <span class="date">2015.04.07</span>
+      <div class="ui-header-person" >
+			<span class="large" >
+					회원님의 그룹
+			</span>
+        <span class="small"> </span>
       </div>
-      <ul class="today"></ul>
-    </section>
-    <section>
-      <div class="category">
-        <h1 class="name">Future</h1>
-        <span class="date">2015.04.08 ~</span>
+      <div class="ui-header-coverphoto-byline">
       </div>
-      <ul class="future"></ul>
-    </section>
+    </div>
+    <div class="ui-header-navbar">
+      <div class="subnav-blurred"
+           style="filter: url(#blur); height: 335px; top: -224px; -webkit-transform: translate3d(0px, 0px, 0px); clip: rect(224px 1060px 270px 1px); background-image: url(https://s.yimg.com/pw/images/coverphoto10_h.jpg.v3); background-size: cover; background-position: 50% 50%;"></div>
+      <div class="subnav">
+        <div class="subnav-sizing">
+          <div class="subnav-content">
+            <div class="links">
+              <a class="link selected" data-track="headerSubnavGroupListClick" href="/groups" role="menuitem"
+                 data-rapid_p="36">그룹 목록</a>
+              <a class="link" data-track="headerSubnavCreateGroupClick" href="/groups_create.gne" role="menuitem"
+                 data-rapid_p="37">그룹 생성</a>
+            </div>
+            <div class="tools">
+            </div>
+            <div class="highlighter" style="bottom: 2px; -webkit-transform: translateX(0px); width: 70px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+    <snb> 서브 네비게이션 바</snb>
+  <section>
+    <div class="category">
+      <h1 class="name">Past</h1>
+      <span class="date">~ 2015.04.06</span>
+    </div>
+    <ul class="past">
+      <li class="todo"><span class="tid">1</span>
+
+        <div class="party_pavicon">p</div>
+        <h2>asd</h2>
+
+        <p>1일 지남</p><a class="complete_btn"></a></li>
+    </ul>
+  </section>
+  <section>
+    <div class="category">
+      <h1 class="name">Today</h1>
+      <span class="date">2015.04.07</span>
+    </div>
+    <ul class="today"></ul>
+  </section>
+  <section>
+    <div class="category">
+      <h1 class="name">Future</h1>
+      <span class="date">2015.04.08 ~</span>
+    </div>
+    <ul class="future"></ul>
+  </section>
   </main>
-</div>
+</section>
 <script language="javascript" type="text/javascript" src="/scripts/personal/ubuntudoPersonal.js"></script>
 <script language="javascript" type="text/javascript" src="/scripts/personal/dataManager.js"></script>
 <script language="javascript" type="text/javascript" src="/scripts/personal/todoManager.js"></script>
