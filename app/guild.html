@@ -31,7 +31,7 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
 <![endif]-->
-<header>
+<header id="global-header">
   <div class="logo">
     <!--<img src=""/>-->
   </div>
@@ -39,14 +39,12 @@
 
   <nav>
     <h1 class="blind"> 페이지 메뉴 </h1>
-
     <h2 class="blind">홈</h2>
     <a href="">home</a>
 
     <h2 class="blind">길드</h2>
     <a href="/guild">guild</a>
   </nav>
-
   <section class="left_section">
     <h1 class="blind">검색창,Todo추가,내정보</h1>
 
@@ -121,81 +119,138 @@
   </div>
 </div>
 
-<section id="container" class="ns_personal">
-  <h1 class="blind">내가 속한 길드들</h1>
-  <header class="ui-header dark">
-    <div class="ui-header-coverphoto">
-      <div style="-webkit-transform: translate3d(0px, 0px, 0px); background-image: url(https://s.yimg.com/pw/images/coverphoto10_h.jpg.v3);"></div>
-    </div>
-    <div class="ui-header-content" >
-      <div class="ui-header-avatar">
-        <a data-track="headerBuddyIconClick" href="/photos/103971606@N08/" data-rapid_p="35">
-          <div class="avatar person large"
-               style="background-image: url(//c4.staticflickr.com/4/3715/buddyicons/103971606@N08_r.jpg?1391599212#103971606@N08);">
-          </div>
-        </a>
-      </div>
-      <div class="ui-header-person" >
-			<span class="large" >
-					회원님의 그룹
-			</span>
-        <span class="small"> </span>
-      </div>
-      <div class="ui-header-coverphoto-byline">
-      </div>
-    </div>
-    <div class="ui-header-navbar">
-      <div class="subnav-blurred"
-           style="filter: url(#blur); height: 335px; top: -224px; -webkit-transform: translate3d(0px, 0px, 0px); clip: rect(224px 1060px 270px 1px); background-image: url(https://s.yimg.com/pw/images/coverphoto10_h.jpg.v3); background-size: cover; background-position: 50% 50%;"></div>
-      <div class="subnav">
-        <div class="subnav-sizing">
-          <div class="subnav-content">
-            <div class="links">
-              <a class="link selected" data-track="headerSubnavGroupListClick" href="/groups" role="menuitem"
-                 data-rapid_p="36">그룹 목록</a>
-              <a class="link" data-track="headerSubnavCreateGroupClick" href="/groups_create.gne" role="menuitem"
-                 data-rapid_p="37">그룹 생성</a>
-            </div>
-            <div class="tools">
-            </div>
-            <div class="highlighter" style="bottom: 2px; -webkit-transform: translateX(0px); width: 70px;"></div>
-          </div>
+<section id="container" class="gd_page">
+  <h1 class="blind">길드 리스트 페이지</h1>
+  <header id="gd-header">
+    <div class="gd-header-content">
+      <div class="gd-header-avatar">
+        <div class="avatar person large"
+             style="background-image: url(//c4.staticflickr.com/4/3715/buddyicons/103971606@N08_r.jpg?1391599212#103971606@N08);">
         </div>
       </div>
+      <div class="gd-header-person">
+		  	<span class="large">
+					회원님의 그룹들
+			  </span>
+        <span class="small"> </span>
+      </div>
     </div>
-
+    <div class="gd-header-navbar">
+      <snb class="sub-nav-content">
+        <h2 class="blind">그룹 서브 네비게이션 바</h2>
+        <div class="links">
+          <a class="link selected" data-track="headerSubnavGroupListClick" href="/group/list" role="menuitem"
+            >그룹 목록</a>
+          <h3 class="blind">그룹목록</h3>
+          <a class="link" data-track="headerSubnavCreateGroupClick" href="/group/new" role="menuitem"
+            >그룹 생성</a>
+          <h3 class="blind">그룹 생성</h3>
+        </div>
+        <div class="tools">
+        </div>
+      </snb>
+    </div>
   </header>
-    <snb> 서브 네비게이션 바</snb>
-  <section>
-    <div class="category">
-      <h1 class="name">Past</h1>
-      <span class="date">~ 2015.04.06</span>
-    </div>
-    <ul class="past">
-      <li class="todo"><span class="tid">1</span>
-
-        <div class="party_pavicon">p</div>
-        <h2>asd</h2>
-
-        <p>1일 지남</p><a class="complete_btn"></a></li>
-    </ul>
+  <section id="gd-body">
+    <h1 class="blind">길드 페이지 본문</h1>
+    <section id="gd-list-container">
+      <h1>내가 속한 길드들</h1>
+      <ul id="gd-list">
+        <li class="gd-container list1">
+          <article class="guild-01">
+            <header class="gd-title">
+              <h1 class="gd-list-title">길드명-1</h1>
+              <!-- 다른 요소들. 날짜? 멤버? 등등 -->
+            </header>
+            <section class="gd pt-list-container">
+              <h1 class="blind">길드명-1의 파티리스트</h1>
+              <ul class="gd pt-list-01">
+                <li class="pt-container-01">
+                  <article class="party-01">
+                    <header>
+                      <h1 class="gd-pt-title">파티명-1</h1>
+                    </header>
+                    <div class="gd pt-content">
+                      <p>파티1의 내용들</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="pt-container 02">
+                  <article class="party-02">
+                    <header>
+                      <h1 class="gd-pt-title">파티명-2</h1>
+                    </header>
+                    <div class="gd pt-content">
+                      <p>파티2의 내용들</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="pt-container 03">
+                  <article class="party-03">
+                    <header>
+                      <h1 class="gd-pt-title">파티명-3</h1>
+                    </header>
+                    <div class="gd pt-content">
+                      <p>파티3의 내용들</p>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </section>
+          </article>
+        </li>
+        <li class="gd-container 02">
+          <article class="guild-02">
+            <p>${guild.gid}</p>
+            <header class="gd-title">
+              <h1 class="gd-list-title">${guild.guildName}</h1>
+              <!-- 다른 요소들. 날짜? 멤버? 등등 -->
+            </header>
+            <section class="gd pt-list-container">
+              <h1 class="blind">${guild.gid}의 party-list</h1>
+              <ul class="gd pt-list-01">
+                <li class="pt-container-01">
+                  <article class="party-01">
+                    <header>
+                      <h1 class="gd-pt-title">${party.partyName}</h1>
+                    </header>
+                    <div class="gd pt-content">
+                      <p>파티1의 내용들</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="pt-container 02">
+                  <article class="party-02">
+                    <header>
+                      <h1 class="gd-pt-title">파티명-2</h1>
+                    </header>
+                    <div class="gd pt-content">
+                      <p>파티2의 내용들</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="pt-container 03">
+                  <article class="party-03">
+                    <header>
+                      <h1 class="gd-pt-title">파티명-3</h1>
+                    </header>
+                    <div class="gd pt-content">
+                      <p>파티3의 내용들</p>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </section>
+          </article>
+        </li>
+        <li class="gd-container 03"></li>
+      </ul>
+      </article>
+    </section>
   </section>
-  <section>
-    <div class="category">
-      <h1 class="name">Today</h1>
-      <span class="date">2015.04.07</span>
-    </div>
-    <ul class="today"></ul>
-  </section>
-  <section>
-    <div class="category">
-      <h1 class="name">Future</h1>
-      <span class="date">2015.04.08 ~</span>
-    </div>
-    <ul class="future"></ul>
-  </section>
-  </main>
 </section>
+
+
 <script language="javascript" type="text/javascript" src="/scripts/personal/ubuntudoPersonal.js"></script>
 <script language="javascript" type="text/javascript" src="/scripts/personal/dataManager.js"></script>
 <script language="javascript" type="text/javascript" src="/scripts/personal/todoManager.js"></script>
